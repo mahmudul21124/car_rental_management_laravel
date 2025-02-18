@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('car_owners', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->integer('car_id');
+            $table->integer('car_id')->nullable();
             $table->string('email')->unique();
             $table->string('password');
             $table->string('phone');
